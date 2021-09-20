@@ -53,6 +53,14 @@
       </ul>
       <p appBasicHighlight>Style me with basic directive</p>
       <p [appBetterHighlight]= "'red'" [defaultColor]="'yellow'">Style me with a better directive</p>
+      
+      <!-- ngSwitchCase é tipo usare switch() { case: } in JavaScript  -->
+      <div [ngSwitch]="value">
+        <p *ngSwitchCase="5" >Value is 5</p> <!-- when value === 5; print 'Value is 5' -->
+        <p *ngSwitchCase="10" >Value is 10</p> <!-- when value === 10; print 'Value is 10' -->
+        <p *ngSwitchCase="100" >Value is 100</p> <!-- when value === 100; print 'Value is 100' -->
+      </div>
+      
       <ng-template [ngIf]="onlyOdd">
         <p>Only odd</p>
       </ng-template>
